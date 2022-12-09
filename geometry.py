@@ -83,7 +83,3 @@ def get_buf_max(gdf: GeoDataFrame, working_tif: str) -> GeoDataFrame:
     gdf['dsm_value'] = zs_rslt
     return gdf
 
-# Concat code, could be useful
-# Concating shapefiles into singular geodataframe - for about 3000 shapefiles takes about 15 minutes
-# gdf = gpd.GeoDataFrame(pd.concat([gpd.read_file(i) for i in working_shp],
-#                                  ignore_index=True), crs=gpd.read_file(working_shp[0]).crs)
