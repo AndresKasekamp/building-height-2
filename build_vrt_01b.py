@@ -1,3 +1,4 @@
+# Building VRT for DEM
 import glob
 from osgeo import gdal
 

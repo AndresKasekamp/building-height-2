@@ -1,3 +1,4 @@
+# Building VRT for DSM
 import glob
 from osgeo import gdal
 
@@ -6,10 +7,10 @@ gdal.PushErrorHandler('CPLQuietErrorHandler')
 gdal.UseExceptions()
 
 # Folder read in
-tif_folder = r"D:\LiDAR\Development\building_height_main\out_2021\Total\tif"
+tif_folder = r"D:\LiDAR\Development\building_height_main_2020\out_2020\Total\tif"
 
 # Output name
-vrt_out = r"D:\LiDAR\Development\building_height_main\out_2021\Total\madal_2021.vrt"
+vrt_out = r"D:\LiDAR\Development\building_height_main_2020\out_2020\Total\madal_2020.vrt"
 
 # Finding tif
 working_tif = [tif for tif in glob.glob(fr"{tif_folder}\*.tif")]

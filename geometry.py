@@ -56,14 +56,14 @@ def calculate_building_h(gdf: GeoDataFrame) -> GeoDataFrame:
     return gdf
 
 
-def write_to_geopackage(gdf: GeoDataFrame, file_name: str) -> None:
+def write_to_geopackage(gdf: GeoDataFrame, path: str, file_name: str) -> None:
     """ Writing file to geopackage, won't use layer name
 
     :param gdf: working gdf
+    :param path: directory path for output
     :param file_name: output name for file
     """
-    # gdf.to_file(fr"D:\LiDAR\Development\building_height_main\out_2021\Total\gpkg\{file_name}.gpkg", driver="GPKG")
-    gdf.to_file(fr"D:\LiDAR\Development\building_height_main\out_2021\Total\gpkg_merge\{file_name}.gpkg", driver="GPKG")
+    gdf.to_file(fr"{path}\{file_name}.gpkg", driver="GPKG")
     print("\tWrite to gpkg done")
 
 

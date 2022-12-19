@@ -25,7 +25,7 @@ for wg in working_gpkg:
     etak_gdf = etak_gdf.merge(ms_gdf, on='etak_id')
     print("Merge done")
 
-g.write_to_geopackage(etak_gdf, "etak_merge")
+g.write_to_geopackage(etak_gdf, path=r"D:\LiDAR\Development\building_height_main_2020\out_2020\Total\gpkg", file_name="etak_merge")
 
 # # Concat code, could be useful
 # # Concating shapefiles into singular geodataframe - for about 3000 shapefiles takes about 15 minutes
