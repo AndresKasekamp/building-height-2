@@ -2,6 +2,9 @@ from geopandas.geodataframe import GeoDataFrame
 from rasterstats import zonal_stats
 import numpy as np
 
+# Custom types
+CentroidOut = list[tuple[float, float]]
+
 
 def drop_nan_percent(gdf: GeoDataFrame) -> GeoDataFrame:
     """ Dropping nan Protsent values (cannot be used for analysis)
@@ -33,7 +36,7 @@ def add_geometry_attributes(gdf: GeoDataFrame) -> GeoDataFrame:
     return gdf
 
 
-def centroid_coordinates(gdf: GeoDataFrame) -> list[tuple[float, float]]:
+def centroid_coordinates(gdf: GeoDataFrame) -> CentroidOut:
     """ Detecting centroid coordinates to a workable data structure
 
     :param gdf: working gdf
