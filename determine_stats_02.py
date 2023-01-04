@@ -14,10 +14,10 @@ gdal.PushErrorHandler('CPLQuietErrorHandler')
 gdal.UseExceptions()
 
 # Working directories
-shapefile_folder = r"D:\LiDAR\Development\building_height_main_2020\out_2020\Total\shp"  # shapefile
+shapefile_folder = r"D:\LiDAR\Development\building_height_main_2019\out_2019\Total\work_shp"  # shapefile
 
 # Virtual raster input
-vrt_dsm = r"D:\LiDAR\Development\building_height_main_2020\out_2020\Total\madal_2020.vrt"
+vrt_dsm = r"D:\LiDAR\Development\building_height_main_2019\out_2019\Total\madal_2019.vrt"
 vrt_dem = r"D:\LiDAR\Development\building_height_main\out_2021\Total\dem_full_2021.vrt"
 
 # Finding shapefiles
@@ -49,7 +49,7 @@ for ws in working_shp:
     print("\tDone with DEM")
 
     gdf = g.calculate_building_h(gdf)
-    g.write_to_geopackage(gdf, path=r"D:\LiDAR\Development\building_height_main_2020\out_2020\Total\gpkg", file_name=ms)
+    g.write_to_geopackage(gdf, path=r"D:\LiDAR\Development\building_height_main_2019\out_2019\Total\gpkg", file_name=ms)
     print("\tGeopackage written")
 
     end_time = time.time()

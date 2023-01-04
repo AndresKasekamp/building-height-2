@@ -7,10 +7,10 @@ gdal.PushErrorHandler('CPLQuietErrorHandler')
 gdal.UseExceptions()
 
 # Folder read in
-tif_folder = r"D:\LiDAR\Development\building_height_main_2020\out_2020\Total\tif"
+tif_folder = r"D:\LiDAR\Development\building_height_main_2019\out_2019\Total\work_tif"
 
 # Output name
-vrt_out = r"D:\LiDAR\Development\building_height_main_2020\out_2020\Total\madal_2020.vrt"
+vrt_out = r"D:\LiDAR\Development\building_height_main_2019\out_2019\Total\madal_2019.vrt"
 
 # Finding tif
 working_tif = [tif for tif in glob.glob(fr"{tif_folder}\*.tif")]

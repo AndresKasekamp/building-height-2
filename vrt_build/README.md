@@ -1,0 +1,1 @@
+Building VRT for building stats easier generation
