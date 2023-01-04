@@ -17,12 +17,10 @@ gdal.UseExceptions()
 # Virtual raster constant for dem
 VRT_DEM = r"D:\LiDAR\Development\building_height_main\out_2021\Total\dem_full_2021.vrt"
 
-# Virtual raster input for dsm
-vrt_dsm = r"D:\LiDAR\Development\building_height_main_2018\out_2018\Total\madal_2018.vrt"
-
-# Working directories
-shapefile_folder = r"D:\LiDAR\Development\building_height_main_2018\out_2018\Total\shp"  # shapefile input
-gpkg_folder = r"D:\LiDAR\Development\building_height_main_2018\out_2018\Total\gpkg"  # gpkg out
+# Working files
+vrt_dsm = r"D:\LiDAR\Development\building_height_main_2012\out_2012\Total\madal_2012.vrt" # Virtual raster input for dsm
+shapefile_folder = r"D:\LiDAR\Development\building_height_main_2012\out_2012\Total\shp"  # shapefile input
+gpkg_folder = r"D:\LiDAR\Development\building_height_main_2012\out_2012\Total\gpkg"  # gpkg out
 
 
 def main() -> None:
